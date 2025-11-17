@@ -8,9 +8,8 @@ services:
     ports:
       - "${ODOO_PORT}:8069"
     volumes:
-      - /odoo_modules/hola_mundo # Metí esto.
       - ./config/odoo.conf:/etc/odoo/odoo.conf
-      - ./addons:/mnt/extra-addons
+      - ./odoo_modules:/mnt/extra-addons
     environment:
       - HOST=db
       - USER=odoo
